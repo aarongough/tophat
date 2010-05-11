@@ -1,0 +1,65 @@
+== Tophat
+
+Tophat is an extremely lightweight and SEO friendly Javascript menu system that 
+generates dynamic menus from simple and valid (X)HTML. Tophat is designed to be reliable,
+easy to setup and easy to style. Tophat is SEO friendly because it does not hide any
+of your menu information in Javascript variables, instead is reads it all from your
+source HTML document where web-crawlers are also able to find it easily. Tophat works
+in all major browsers.
+
+Tophat works hard to play nice with your other Javascript and does not pollute the global
+namespace or overwrite existing event handlers.
+
+=== Installation
+
+To install Tophat simply visit the {Github page}[http://github.com/aarongough/tophat] and
+click the 'Download source' button at the top right-hand corner of the page, download the
+zip file and then extract it in your site's root directory. All you need to do now is setup
+your menu and you're done!
+
+=== Menu Setup
+
+To setup the menu system follow these steps:
+
+1. Add the JavaScript and CSS tags to your template / source
+
+    <script src="/tophat-menu/tophat-menu.js" type="text/javascript"></script>
+    <link href="/tophat-menu/tophat-menu.css" rel="stylesheet" />
+    
+2. Setup your menu HTML like so
+
+    <ul class="tophat_menu horizontal">
+      <li class="no_submenu"><a href="/">Home</a></li>
+      <li class="has_submenu"><span>Categories</span>
+        <ul class="is_submenu">
+          <li><a href="/cat/1">Category 1</a></li>
+          <li><a href="/cat/2">Category 1</a></li>
+          <li><a href="/cat/3">Category 1</a></li>
+        </ul>
+      </li>
+      <li class="no_submenu"><a href="/logout">Logout</a></li>
+    </ul>
+    
+3. You're done!
+
+Note: You can also setup vertical menus using the 'vertical' class like so:
+
+    <ul class="tophat_menu vertical">
+      ...
+    </ul>
+    
+=== Styling
+
+To match the look and feel of your new menu to the rest of your project you will need
+to change the 'tophat-menu.css' stylesheet. The stylesheet that is provided can be used
+as-is or can be used as a template for your final look.
+
+=== More Info
+
+If you need more info, or have an issue to report please contact me at: {aaron@aarongough.com}[mailto:aaron@aarongough.com]
+
+=== Author & Credits
+
+Author:: {Aaron Gough}[mailto:aaron@aarongough.com]
+
+Copyright (c) 2010 {Aaron Gough}[http://thingsaaronmade.com/] ({thingsaaronmade.com}[http://thingsaaronmade.com/]), released under the MIT license
