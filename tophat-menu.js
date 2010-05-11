@@ -63,6 +63,11 @@ function tophatMenuSetup()
 	menus = getElementsByClassName( "has_submenu" );
 	for( x = 0, array_length = menus.length; x < array_length; x++ )
 		{
+		if(menus[x].id.length == 0)
+		  {
+		  timestamp = new Date;
+		  menus[x].id = timestamp.getSeconds + "_" + x;
+		  }
 		menus[x].tophatMenuInstance = new tophatMenu( menus[x].id );
 		}
 	}
