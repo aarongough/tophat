@@ -23,8 +23,8 @@ To setup the menu system follow these steps:
 
 1. Add the JavaScript and CSS tags to your template / source
 
-    <script src="/tophat-menu/tophat-menu.js" type="text/javascript"></script>
     <link href="/tophat-menu/tophat-menu.css" rel="stylesheet" />
+    <script src="/tophat-menu/tophat-menu.js" type="text/javascript"></script>
     
 2. Setup your menu HTML like so
 
