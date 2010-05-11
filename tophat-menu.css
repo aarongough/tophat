@@ -6,15 +6,11 @@ text-align: left;
 }
 
 .tophat_menu .horizontal{
-position: absolute;
-top: 244px;
-left: 288px;
-width: 677px;
-height: 24px;
+position: relative;
 }
 
 .tophat_menu .vertical{
-width: 134px;
+position: relative;
 }
 
 .horizontal .has_submenu, .horizontal .no_submenu{
