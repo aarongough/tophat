@@ -1,4 +1,4 @@
-function tophatMenu(menuId)
+function tophatMenu(menuElement)
 	{
 	this.showMenu = function ()
 		{
@@ -15,26 +15,26 @@ function tophatMenu(menuId)
 	var thisObj = this;
 	
 	// Find and store the actual submenu
-	this.menuEl = document.getElementById( menuId );
-	for( x2 = 0; x2 < this. menuEl.childNodes.length; x2++ )
+	this.menuElement = menuElement;
+	for( x2 = 0; x2 < this. menuElement.childNodes.length; x2++ )
 		{
-		if( this.menuEl.childNodes[x2].tagName && this.menuEl.childNodes[x2].tagName == "UL" )
+		if( this.menuElement.childNodes[x2].tagName && this.menuElement.childNodes[x2].tagName == "UL" )
 			{
-			this.menuList = this.menuEl.childNodes[x2];
+			this.menuList = this.menuElement.childNodes[x2];
 			}
 		}
 	
 	this.hideMenu();
 	
 	// Assign the event handlers
-	var oldMouseover = this.menuEl.onmouseover || function() {};
-  this.menuEl.onmouseover = function ()
+	var oldMouseover = this.menuElement.onmouseover || function() {};
+  this.menuElement.onmouseover = function ()
   	{
   	thisObj.showMenu();
   	oldMouseover();
   	}
-  var oldMouseout = this.menuEl.onmouseout || function() {};
-  this.menuEl.onmouseout = function ()
+  var oldMouseout = this.menuElement.onmouseout || function() {};
+  this.menuElement.onmouseout = function ()
   	{
   	thisObj.hideMenu();
   	oldMouseout();
@@ -63,12 +63,7 @@ function tophatMenuSetup()
 	menus = getElementsByClassName( "has_submenu" );
 	for( x = 0, array_length = menus.length; x < array_length; x++ )
 		{
-		if(menus[x].id.length == 0)
-		  {
-		  timestamp = new Date;
-		  menus[x].id = timestamp.getSeconds + "_" + x;
-		  }
-		menus[x].tophatMenuInstance = new tophatMenu( menus[x].id );
+		menus[x].tophatMenuInstance = new tophatMenu( menus[x] );
 		}
 	}
 
