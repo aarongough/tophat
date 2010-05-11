@@ -14,19 +14,20 @@ position: relative;
 }
 
 .horizontal .has_submenu, .horizontal .no_submenu{
-width: 110px;
+display: block;
 height: 24px;
 float: left;	
 position: relative;
+padding-left: 13px;
+padding-right: 13px;
 }
 
 .horizontal .has_submenu span, .horizontal .no_submenu a{
 display: block;
-width: 110px;
 height: 28px;
 line-height: 24px;
 text-decoration: none;
-color: white;
+color: #8b8e90;
 }
 
 .horizontal li .is_submenu{
