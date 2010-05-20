@@ -67,9 +67,16 @@ function tophatMenuSetup()
 		}
 	}
 
-var hoverOldOnload = window.onload || function() {};
-window.onload = function ()
-	{
-	tophatMenuSetup();
-	hoverOldOnload();
-	}
+if(typeof(jQuery) == "function")
+  {
+  jQuery(document).ready( tophatMenuSetup );
+  }
+else
+  {
+  var hoverOldOnload = window.onload || function() {};
+  window.onload = function ()
+  	{
+  	tophatMenuSetup();
+  	hoverOldOnload();
+  	}
+  }
